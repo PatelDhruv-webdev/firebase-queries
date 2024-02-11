@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="width=device-width, initial-scale=10., maximum-scale=1.0, user-scalable=no">
+  <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+  <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: https://code.jquery.com; default-src * 'unsafe-inline'; style-src 'self' https://code.jquery.com 'unsafe-inline'; media-src *" />
+
+  <!-- region jQuery Mobile -->
+  <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- endregion -->
+
+  <!-- region Firebase -->
+  <!--Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <!-- endregion -->
+
+  <script src="js/index.js"></script>
+  <script src="js/facade.js"></script>
+
+  <title>Info6127-W24-Test1-Part1</title>
+</head>
+<body>
+
+!-- region Read page-->
+<div id="pageLab" data-role="page">
+  <header data-role="header" data-position="fixed" data-theme="a">
+    <h1>Test1</h1>
+    <div data-role="navbar" data-iconpos="top">
+      <ul>
+        <li><a href="#pageLab" data-icon="grid" class="ui-btn-active ui-state-persist">Queries</a></li>
+          </ul>
+    </div>
+  </header>
+
+  <section data-role="content">
+    <div id="readDiv">
+      <h2>Test 1 - Part 1 - Queries</h2>
+
+      <button type="button" id="btnQuestion1" name="btnQuestion1" data-icon="plus" class="ui-btn-active">Question1
+      </button>
+     
+      <button type="button" id="btnQuestion2" name="btnQuestion2" data-icon="plus" class="ui-btn-active">Question2
+      </button>
+
+      <button type="button" id="btnQuestion3" name="btnQuestion3" data-icon="plus" class="ui-btn-active">Question3
+      </button>
+
+      <button type="button" id="btnQuestion4" name="btnQuestion4" data-icon="plus" class="ui-btn-active">Question4
+      </button>
+
+      <button type="button" id="btnQuestion5" name="btnQuestion5" data-icon="plus" class="ui-btn-active">Question5
+      </button>
+
+     </div>
+
+  </section>
+  <footer data-role="footer" data-position="fixed" data-theme="a">
+    <h1>&copy; Student</h1>
+  </footer>
+</div>
+<!-- endregion -->
+
+<!-- region Firebase Scripts -->
+<script>
+  // Initialize Firebase
+
+  const firebaseConfig = {
+   
+  apiKey: "AIzaSyApWxsIX9sEq_Q3b5xOEAnznljREBYI9JE",
+  authDomain: "info6127-w24-test1.firebaseapp.com",
+  databaseURL: "https://info6127-w24-test1-default-rtdb.firebaseio.com",
+  projectId: "info6127-w24-test1",
+  storageBucket: "info6127-w24-test1.appspot.com",
+  messagingSenderId: "1033972866229",
+  appId: "1:1033972866229:web:98da581052e9be44f7b2fc"
+};
+ firebase.initializeApp(firebaseConfig);
+</script>
+
+</body>
+</html>
